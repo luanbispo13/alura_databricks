@@ -1,5 +1,5 @@
 %md
-# 🏗️ Pipeline de Ingestão de Dados — `prod_ingestao_dados`
+## 🏗️ Pipeline de Ingestão de Dados — `prod_ingestao_dados`
 
 > Pipeline corporativo de processamento de interações de atendimento ao cliente da **Alumax**, construído sobre a **Arquitetura Medalhão** no **Databricks Lakehouse**.
 
