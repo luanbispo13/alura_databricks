@@ -13,7 +13,7 @@ Pipeline de engenharia de dados da **Alumax** para consolidar interações de su
 
 ## 🎓 Origem do Projeto
 
-Este pipeline foi construído do zero como parte prática do curso **[Databricks: Pipelines de dados com PySpark e Delta Lake](https://cursos.alura.com.br/course/databricks-pipeline-dados-pyspark-delta-lake)**, oferecido pela plataforma **Alura**. O projeto consolida conceitos de ingestão, transformação e orquestração de dados modernos na nuvem.
+Este pipeline foi construído do zero como parte prática do curso **[Databricks: Pipelines de Dados com PySpark e Delta Lake](https://cursos.alura.com.br/course/databricks-pipeline-dados-pyspark-delta-lake)**, oferecido pela plataforma **Alura**. O projeto consolida conceitos de ingestão, transformação e orquestração de dados na nuvem.
 
 ---
 
