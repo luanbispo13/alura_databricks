@@ -180,14 +180,10 @@ O pipeline é gerenciado integralmente via **Databricks Asset Bundles (DABs)** a
 ```
 prod_ingestao_dados/
 ├── databricks.yml          # Configuração principal do DAB
-├── resources/
-│   ├── bronze/             # Notebooks da camada Bronze
-│   │   └── ingestion.py
-│   ├── silver/             # Notebooks da camada Silver
-│   │   └── cleansing.py
-│   └── gold/               # Notebooks da camada Gold
-│       └── business_rules.py
-├── tests/                  # Testes unitários e de integração
+├── etl/
+│   ├── etl_bronze.ipynb           
+│   ├── etl_silver.ipynb               
+│   └── etl_gold.ipynb                 
 ├── README.md               # Este ficheiro
 └── .gitignore
 ```
