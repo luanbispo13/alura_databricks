@@ -1,0 +1,36 @@
+resources:
+  jobs:
+    prod_ingestao_dados:
+      name: prod_ingestao_dados
+      email_notifications:
+        on_start:
+          - luanbisposilva@gmail.com
+        on_failure:
+          - luanbisposilva@gmail.com
+      trigger:
+        pause_status: UNPAUSED
+        file_arrival:
+          url: /Volumes/workspace/raw/bronze/input/
+      tasks:
+        - task_key: prod_ingestao_bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+              4/aula_4_1_prod_bronze
+            source: WORKSPACE
+        - task_key: prod_ingestao_silver
+          depends_on:
+            - task_key: prod_ingestao_bronze
+          notebook_task:
+            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+              4/aula_4_1_prod_silver
+            source: WORKSPACE
+        - task_key: prod_ingestao_gold
+          depends_on:
+            - task_key: prod_ingestao_silver
+          notebook_task:
+            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+              4/aula_4_1_prod_gold
+            source: WORKSPACE
+      queue:
+        enabled: true
+      performance_target: PERFORMANCE_OPTIMIZED
