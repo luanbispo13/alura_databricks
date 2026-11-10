@@ -14,21 +14,21 @@ resources:
       tasks:
         - task_key: prod_ingestao_bronze
           notebook_task:
-            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+            notebook_path: /ELT/etl_bronze.ipynb
               4/aula_4_1_prod_bronze
             source: WORKSPACE
         - task_key: prod_ingestao_silver
           depends_on:
             - task_key: prod_ingestao_bronze
           notebook_task:
-            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+            notebook_path: /ELT/etl_silver.ipynb
               4/aula_4_1_prod_silver
             source: WORKSPACE
         - task_key: prod_ingestao_gold
           depends_on:
             - task_key: prod_ingestao_silver
           notebook_task:
-            notebook_path: /Workspace/Users/luanbisposilva@gmail.com/alura_databricks/aula
+            notebook_path: /ELT/etl_gold.ipynb
               4/aula_4_1_prod_gold
             source: WORKSPACE
       queue:
